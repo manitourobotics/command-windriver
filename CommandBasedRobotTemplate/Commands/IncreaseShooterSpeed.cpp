@@ -3,6 +3,8 @@
 IncreaseShooterSpeed::IncreaseShooterSpeed() {
 	// Use requires() here to declare subsystem dependencies
 	// eg. requires(chassis);
+	Requires(launchShooter);
+	
 }
 
 // Called just before this Command runs the first time
@@ -11,8 +13,9 @@ void IncreaseShooterSpeed::Initialize() {
 }
 
 // Called repeatedly when this Command is scheduled to run
-void IncreaseShooterSpeed::Execute() {
-	
+void IncreaseShooterSpeed::Execute() 
+{
+	launchShooter->arcadeDrive(oi->getLauncherJoystick());	
 }
 
 // Make this return true when this Command no longer needs to run execute()
@@ -29,3 +32,4 @@ void IncreaseShooterSpeed::End() {
 // subsystems is scheduled to run
 void IncreaseShooterSpeed::Interrupted() {
 }
+
