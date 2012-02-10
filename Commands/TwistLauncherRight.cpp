@@ -3,6 +3,7 @@
 TwistLauncherRight::TwistLauncherRight() {
 	// Use requires() here to declare subsystem dependencies
 	// eg. requires(chassis);
+	Requires(launchTwister);
 }
 
 // Called just before this Command runs the first time
@@ -22,6 +23,8 @@ bool TwistLauncherRight::IsFinished() {
 
 // Called once after isFinished returns true
 void TwistLauncherRight::End() {
+	
+	launchTwister->rotateRight();
 	
 }
 

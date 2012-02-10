@@ -27,11 +27,15 @@ void _GLOBAL__I__ZN16ExampleSubsystemC2Ev();
 
 void _GLOBAL__I__ZN16TiltLauncherDownC2Ev();
 
+void _GLOBAL__I__ZN16TwistLauncherOffC2Ev();
+
 void _GLOBAL__I__ZN17DriveWithJoystickC2Ev();
 
 void _GLOBAL__I__ZN17TwistLauncherLeftC2Ev();
 
 void _GLOBAL__I__ZN18TwistLauncherRightC2Ev();
+
+void _GLOBAL__I__ZN20ControlTwistLauncherC2Ev();
 
 void _GLOBAL__I__ZN20DecreaseShooterSpeedC2Ev();
 
@@ -74,9 +78,11 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN14TiltLauncherUpC2Ev,
     _GLOBAL__I__ZN16ExampleSubsystemC2Ev,
     _GLOBAL__I__ZN16TiltLauncherDownC2Ev,
+    _GLOBAL__I__ZN16TwistLauncherOffC2Ev,
     _GLOBAL__I__ZN17DriveWithJoystickC2Ev,
     _GLOBAL__I__ZN17TwistLauncherLeftC2Ev,
     _GLOBAL__I__ZN18TwistLauncherRightC2Ev,
+    _GLOBAL__I__ZN20ControlTwistLauncherC2Ev,
     _GLOBAL__I__ZN20DecreaseShooterSpeedC2Ev,
     _GLOBAL__I__ZN20IncreaseShooterSpeedC2Ev,
     _GLOBAL__I__ZN2OIC2Ev,
@@ -114,11 +120,15 @@ void _GLOBAL__D__ZN16ExampleSubsystemC2Ev();
 
 void _GLOBAL__D__ZN16TiltLauncherDownC2Ev();
 
+void _GLOBAL__D__ZN16TwistLauncherOffC2Ev();
+
 void _GLOBAL__D__ZN17DriveWithJoystickC2Ev();
 
 void _GLOBAL__D__ZN17TwistLauncherLeftC2Ev();
 
 void _GLOBAL__D__ZN18TwistLauncherRightC2Ev();
+
+void _GLOBAL__D__ZN20ControlTwistLauncherC2Ev();
 
 void _GLOBAL__D__ZN20DecreaseShooterSpeedC2Ev();
 
@@ -157,9 +167,11 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN14TiltLauncherUpC2Ev,
     _GLOBAL__D__ZN16ExampleSubsystemC2Ev,
     _GLOBAL__D__ZN16TiltLauncherDownC2Ev,
+    _GLOBAL__D__ZN16TwistLauncherOffC2Ev,
     _GLOBAL__D__ZN17DriveWithJoystickC2Ev,
     _GLOBAL__D__ZN17TwistLauncherLeftC2Ev,
     _GLOBAL__D__ZN18TwistLauncherRightC2Ev,
+    _GLOBAL__D__ZN20ControlTwistLauncherC2Ev,
     _GLOBAL__D__ZN20DecreaseShooterSpeedC2Ev,
     _GLOBAL__D__ZN20IncreaseShooterSpeedC2Ev,
     _GLOBAL__D__ZN2OIC2Ev,

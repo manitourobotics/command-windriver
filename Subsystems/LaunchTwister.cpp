@@ -1,12 +1,15 @@
 #include "LaunchTwister.h"
 #include "../Robotmap.h"
 #include "SmartDashboard/SmartDashboard.h"
+#include "../Commands/ControlTwistLauncher.h"
 
 LaunchTwister::LaunchTwister() : PIDSubsystem("LaunchTwister", Kp, Ki, Kd) {
 	// Use these to get going:
 	// SetSetpoint() -  Sets where the PID controller should move the system
 	//                  to
 	// Enable() - Enables the PID controller.
+	relay = new Relay(1);
+	relay->Set(Relay::kOn);
 }
 
 double LaunchTwister::ReturnPIDInput() {
@@ -22,6 +25,20 @@ void LaunchTwister::UsePIDOutput(double output) {
 }
 
 void LaunchTwister::InitDefaultCommand() {
-	// Set the default command for a subsystem here.
-	//setDefaultCommand(new MySpecialCommand());
+	SetDefaultCommand(new ControlTwistLauncher());
+}
+
+void LaunchTwister::rotateLeft()
+{
+	relay->Set(Relay::kForward);
+}
+
+void LaunchTwister::rotateRight()
+{
+	relay->Set(Relay::kReverse);
+}
+
+void LaunchTwister::rotateOff()
+{
+	//relay->Set(Relay::kOff);
 }

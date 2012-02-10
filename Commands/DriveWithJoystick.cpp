@@ -13,7 +13,8 @@ void DriveWithJoystick::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void DriveWithJoystick::Execute() {
 	// gotta change for gamepad - two joysticks on one device
-	chassis->driveWithJoystick(oi->getDriverJoystick()->GetRawAxis(2), oi->getDriverJoystick()->GetRawAxis(5));
+	chassis->driveWithJoystick
+		(oi->getDriverJoystick()->GetRawAxis(LEFT_STICK_Y), oi->getDriverJoystick()->GetRawAxis(RIGHT_STICK_Y));
 }
 
 // Make this return true when this Command no longer needs to run execute()

@@ -3,6 +3,7 @@
 TwistLauncherLeft::TwistLauncherLeft() {
 	// Use requires() here to declare subsystem dependencies
 	// eg. requires(chassis);
+	Requires(launchTwister);
 }
 
 // Called just before this Command runs the first time
@@ -12,6 +13,7 @@ void TwistLauncherLeft::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void TwistLauncherLeft::Execute() {
+	launchTwister->rotateLeft();
 	
 }
 

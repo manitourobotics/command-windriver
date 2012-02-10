@@ -17,11 +17,17 @@ private:
 	static const double Kp = 0.0;
 	static const double Ki = 0.0;
 	static const double Kd = 0.0;
+	
+	Relay* relay;
 public:
 	LaunchTwister();
 	double ReturnPIDInput();
 	void UsePIDOutput(double output);
 	void InitDefaultCommand();
+	
+	void rotateLeft();
+	void rotateRight();
+	void rotateOff();
 };
 
 #endif

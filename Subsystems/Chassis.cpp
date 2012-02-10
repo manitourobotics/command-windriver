@@ -16,7 +16,3 @@ void Chassis::driveWithJoystick(double left, double right)
 {
 	drive->TankDrive(left, right);
 }
-
-
-// Put methods for controlling this subsystem
-// here. Call these from Commands.
