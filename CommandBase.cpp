@@ -31,6 +31,7 @@ void CommandBase::init() {
 	launchTilter = new LaunchTilter();
 	launchTwister = new LaunchTwister();
 	arm = new Arm();
+	camera = new Camera();
 	
 	oi = new OI();
 }

@@ -8,6 +8,7 @@
 #include "Subsystems/LaunchTilter.h"
 #include "Subsystems/LaunchTwister.h"
 #include "Subsystems/Arm.h"
+#include "Subsystems/Camera.h"
 #include "OI.h"
 
 
@@ -29,6 +30,7 @@ public:
 	static LaunchTilter* launchTilter;
 	static LaunchTwister* launchTwister;
 	static Arm* arm;
+	static Camera* camera;
 	
 	static OI *oi;
 };

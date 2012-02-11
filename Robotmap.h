@@ -37,6 +37,14 @@
 		TWIST_MOTOR_PORT = 1,
 		TILT_MOTOR_PORT = 3,
 
+		
+	};
+	
+	//Digital I/O ports
+	enum
+	{	
+		DIGITAL_ENCODER_A = 1,
+		DIGITAL_ENCODER_B = 2,
 		LOWER_LIMIT_ARM_PORT = 13,
 		UPPER_LIMIT_ARM_PORT = 14
 	};
@@ -57,6 +65,13 @@
 		DECREASE_SHOOTER_SPEED = 3,
 		INCREASE_SHOOTER_SPEED = 5
 		
+	};
+	
+	//voltage
+	enum
+	{
+		FINAL_ARM_POSITION = 4,
+		STARTING_ARM_POSITION = 1
 	};
 	
 	// Joystick 

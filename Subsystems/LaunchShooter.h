@@ -23,7 +23,11 @@ private:
 	Jaguar* topMotor;
 	Jaguar* bottomMotor;
 	
-	float BOTTOM_MOTOR_PORPORTIONALITY_CONSTANT; // The bottom motor must spin slower than the upper one.
+	Encoder* digitalEncoder;
+
+	const float BOTTOM_MOTOR_PORPORTIONALITY_CONSTANT; // The bottom motor must spin slower than the upper one.
+	const float MAX_SPEED;
+
 	
 	/*RobotDrive * drive;*/
 	
@@ -38,6 +42,8 @@ public:
 	
 	void setMotorSpeeds(float speed);
 	void stopMotors();
+	
+	Encoder* getDigitalEncoder();
 };
 
 #endif

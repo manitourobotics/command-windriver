@@ -19,8 +19,8 @@ void Arm::InitDefaultCommand() {
 
 void Arm::moveForward()
 {
-	cout << "upPosition: " << upPosition->Get() << '\n'; 
-	cout << "SET_SPEED: " << SET_SPEED << '\n'; 
+	//cout << "upPosition: " << upPosition->Get() << '\n'; 
+	//cout << "SET_SPEED: " << SET_SPEED << '\n'; 
 	// Move in an upwards position unless the upwards switch is set
 	if(upPosition->Get())
 	{
@@ -34,7 +34,7 @@ void Arm::moveForward()
 
 void Arm::moveReverse()
 {
-	cout << "downPosition: " << downPosition->Get() << '\n';//0 closed
+	//cout << "downPosition: " << downPosition->Get() << '\n';//0 closed
 	
 	// Move in a downwards position unless the downwards switch is set
 	if(downPosition->Get()) 
