@@ -7,6 +7,7 @@
 #include "Subsystems/LaunchShooter.h"
 #include "Subsystems/LaunchTilter.h"
 #include "Subsystems/LaunchTwister.h"
+#include "Subsystems/Arm.h"
 #include "OI.h"
 
 
@@ -22,11 +23,12 @@ public:
 	static void init();
 	
 	// Create a single static instance of all of your subsystems
-	static Chassis *chassis;
-	static Acquisition *acquisition;
-	static LaunchShooter *launchShooter;
-	static LaunchTilter *launchTilter;
-	static LaunchTwister *launchTwister;	
+	static Chassis* chassis;
+	static Acquisition* acquisition;
+	static LaunchShooter* launchShooter;
+	static LaunchTilter* launchTilter;
+	static LaunchTwister* launchTwister;
+	static Arm* arm;
 	
 	static OI *oi;
 };
