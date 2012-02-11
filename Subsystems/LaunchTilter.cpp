@@ -1,12 +1,15 @@
 #include "LaunchTilter.h"
 #include "../Robotmap.h"
 #include "SmartDashboard/SmartDashboard.h"
+#include "../Commands/ControlTiltLauncher.h"
 
 LaunchTilter::LaunchTilter() : PIDSubsystem("LaunchTilter", Kp, Ki, Kd) {
 	// Use these to get going:
 	// SetSetpoint() -  Sets where the PID controller should move the system
 	//                  to
 	// Enable() - Enables the PID controller.
+	relay = new Relay(3);
+	
 }
 
 double LaunchTilter::ReturnPIDInput() {
@@ -24,4 +27,17 @@ void LaunchTilter::UsePIDOutput(double output) {
 void LaunchTilter::InitDefaultCommand() {
 	// Set the default command for a subsystem here.
 	//setDefaultCommand(new MySpecialCommand());
+	SetDefaultCommand(new ControlTiltLauncher());
+}
+
+void LaunchTilter::rotatePositive(){
+	relay->Set(Relay::kForward);
+}
+
+void LaunchTilter::rotateNegative(){
+	relay->Set(Relay::kReverse);
+}
+
+void LaunchTilter::rotateOff(){
+	relay->Set(Relay::kOff);
 }

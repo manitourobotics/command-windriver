@@ -1,6 +1,7 @@
 #include "ControlTwistLauncher.h"
 
-ControlTwistLauncher::ControlTwistLauncher() {
+ControlTwistLauncher::ControlTwistLauncher(): 
+DEAD_ZONE(0.8){
 	// Use requires() here to declare subsystem dependencies
 	// eg. requires(chassis);
 	Requires(launchTwister);
@@ -14,17 +15,17 @@ void ControlTwistLauncher::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void ControlTwistLauncher::Execute() {
 	
-	m_twistValue = oi->getLauncherJoystick()->GetRawAxis(Joystick::kTwistAxis);
-	printf("twist_value: %f\n", m_twistValue );
-	if(m_twistValue > 0)
+	twistValue = oi->getLauncherJoystick()->GetRawAxis(Joystick::kTwistAxis);
+	//printf("twist_value: %f\n", twistValue );
+	if(twistValue > DEAD_ZONE)
 	{
 		launchTwister->rotateRight();
 	}
-	else if(m_twistValue < 0)
+	else if(twistValue < DEAD_ZONE * -1)
 	{
 		launchTwister->rotateLeft();
 	}
-	else if(m_twistValue == 0)
+	else
 	{
 		launchTwister->rotateOff();
 	}

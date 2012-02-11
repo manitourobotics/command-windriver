@@ -317,20 +317,16 @@
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Vision/ColorImage.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/WPIErrors.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Command.h \
-  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/ExampleCommand.h \
-  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../CommandBase.h \
-  C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Command.h \
-  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/Chassis.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/CommandBase.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/Chassis.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Subsystem.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h \
-  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/Acquisition.h \
-  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/LaunchShooter.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/Acquisition.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/LaunchShooter.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/PIDSubsystem.h \
-  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/LaunchTilter.h \
-  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/LaunchTwister.h \
-  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../OI.h \
-  C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h \
-  C:/WindRiver/workspace/CommandBasedRobotTemplate/CommandBase.h
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/LaunchTilter.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/LaunchTwister.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/OI.h
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h:
 
@@ -964,30 +960,22 @@ C:/WindRiver/vxworks-6.3/target/h/WPILib/WPIErrors.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Command.h:
 
-C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/ExampleCommand.h:
+C:/WindRiver/workspace/CommandBasedRobotTemplate/CommandBase.h:
 
-C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../CommandBase.h:
-
-C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Command.h:
-
-C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/Chassis.h:
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/Chassis.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Subsystem.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h:
 
-C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/Acquisition.h:
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/Acquisition.h:
 
-C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/LaunchShooter.h:
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/LaunchShooter.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/PIDSubsystem.h:
 
-C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/LaunchTilter.h:
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/LaunchTilter.h:
 
-C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/LaunchTwister.h:
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/LaunchTwister.h:
 
-C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../OI.h:
-
-C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h:
-
-C:/WindRiver/workspace/CommandBasedRobotTemplate/CommandBase.h:
+C:/WindRiver/workspace/CommandBasedRobotTemplate/OI.h:

@@ -9,7 +9,9 @@
  * @author Bang
  */
 class ControlTwistLauncher: public CommandBase {
-	float m_twistValue;
+	float twistValue;
+	float const DEAD_ZONE; // The relay moves even when the joystick is at rest
+	
 public:
 	ControlTwistLauncher();
 	virtual void Initialize();

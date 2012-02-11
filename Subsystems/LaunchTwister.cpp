@@ -40,5 +40,5 @@ void LaunchTwister::rotateRight()
 
 void LaunchTwister::rotateOff()
 {
-	//relay->Set(Relay::kOff);
+	relay->Set(Relay::kOff);
 }

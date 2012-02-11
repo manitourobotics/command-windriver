@@ -17,11 +17,17 @@ private:
 	static const double Kp = 0.0;
 	static const double Ki = 0.0;
 	static const double Kd = 0.0;
+	
+	Relay* relay;
 public:
 	LaunchTilter();
 	double ReturnPIDInput();
 	void UsePIDOutput(double output);
 	void InitDefaultCommand();
+	
+	void rotatePositive();
+	void rotateNegative();
+	void rotateOff();
 };
 
 #endif

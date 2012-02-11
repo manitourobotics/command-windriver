@@ -28,7 +28,9 @@ private:
 	Jaguar* topMotor;
 	Jaguar* bottomMotor;
 	
-	RobotDrive * drive;
+	float BOTTOM_MOTOR_PORPORTIONALITY_CONSTANT; // The bottom motor must spin slower than the upper one.
+	
+	/*RobotDrive * drive;*/
 	
 public:
 	LaunchShooter();
@@ -38,6 +40,9 @@ public:
 	double ReturnPIDInput();
 	void UsePIDOutput(double output);
 	void InitDefaultCommand();
+	
+	void setMotorSpeeds(float speed);
+	void stopMotors();
 };
 
 #endif

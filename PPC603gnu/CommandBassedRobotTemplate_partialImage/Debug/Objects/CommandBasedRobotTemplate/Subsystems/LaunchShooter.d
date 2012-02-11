@@ -330,7 +330,8 @@
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/PIDSubsystem.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/../Commands/../Subsystems/LaunchTwister.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/../Commands/../OI.h \
-  C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h
+  C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/../Commands/ControlLaunchShooterSpeed.h
 
 C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/LaunchShooter.h:
 
@@ -991,3 +992,5 @@ C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/../Commands/../Subsy
 C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/../Commands/../OI.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h:
+
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/../Commands/ControlLaunchShooterSpeed.h:
