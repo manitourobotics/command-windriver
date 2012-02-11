@@ -3,8 +3,11 @@
 #include "../Commands/ControlArm.h"
 
 Arm::Arm():
-Subsystem("Arm"), SET_SPEED(.4)/*dummy speed*/ {
+Subsystem("Arm"), SET_SPEED(.416666667)/*12v speed -> 5v*/ {
 	armMotor = new Jaguar(ARM_MOTOR_PORT);
+	
+	upPosition = new DigitalInput(UPPER_LIMIT_ARM_PORT);
+	downPosition = new DigitalInput(LOWER_LIMIT_ARM_PORT);
 }
     
 void Arm::InitDefaultCommand() {
@@ -16,15 +19,36 @@ void Arm::InitDefaultCommand() {
 
 void Arm::moveForward()
 {
-	armMotor->Set(SET_SPEED);
+	cout << "upPosition: " << upPosition->Get() << '\n'; 
+	cout << "SET_SPEED: " << SET_SPEED << '\n'; 
+	// Move in an upwards position unless the upwards switch is set
+	if(upPosition->Get())
+	{
+		armMotor->Set(SET_SPEED);
+	}
+	else
+	{
+		armMotor->Set(0);
+	}
 }
 
 void Arm::moveReverse()
 {
-	armMotor->Set(SET_SPEED * -1);
+	cout << "downPosition: " << downPosition->Get() << '\n';//0 closed
+	
+	// Move in a downwards position unless the downwards switch is set
+	if(downPosition->Get()) 
+	{
+		armMotor->Set(SET_SPEED * -1);
+	}
+	else
+	{
+		armMotor->Set(0);
+	}
 }
 
 void Arm::moveOff()
 {
-	armMotor->Set(0);
+	armMotor->Set(Relay::kOff);
 }
+ 

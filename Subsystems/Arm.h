@@ -15,6 +15,9 @@ private:
 	
 	const float SET_SPEED;
 	Jaguar* armMotor;
+	
+	DigitalInput* upPosition;
+	DigitalInput* downPosition;
 public:
 	Arm();
 	void InitDefaultCommand();

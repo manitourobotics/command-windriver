@@ -19,11 +19,11 @@ void ControlTwistLauncher::Execute() {
 	//printf("twist_value: %f\n", twistValue );
 	if(twistValue > DEAD_ZONE)
 	{
-		launchTwister->rotateRight();
+		launchTwister->rotateLeft();
 	}
 	else if(twistValue < DEAD_ZONE * -1)
 	{
-		launchTwister->rotateLeft();
+		launchTwister->rotateRight();
 	}
 	else
 	{

@@ -1,4 +1,5 @@
 #include "ControlArm.h"
+#include "../Robotmap.h"
 
 ControlArm::ControlArm() {
 	// Use requires() here to declare subsystem dependencies
@@ -13,16 +14,16 @@ void ControlArm::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void ControlArm::Execute() {
-	if(oi->getDriverJoystick()->GetRawButton(5))/*dummy button*/{
+	
+	//The arm should only move outwards when the button is pressed
+	if(oi->getDriverJoystick()->GetRawButton(FORWARD_ARM))/*dummy button*/{
 		arm->moveForward();
 	}
-	else if(oi->getDriverJoystick()->GetRawButton(4)){
+	else/* if()*/
+	{
 		arm->moveReverse();
 	}
-	else if (oi->getDriverJoystick()->GetRawButton(2))
-	{
-		arm->moveOff();
-	}
+	/* need to add sensor code*/
 	
 }
 

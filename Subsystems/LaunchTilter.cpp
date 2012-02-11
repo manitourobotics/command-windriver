@@ -8,7 +8,7 @@ LaunchTilter::LaunchTilter() : PIDSubsystem("LaunchTilter", Kp, Ki, Kd) {
 	// SetSetpoint() -  Sets where the PID controller should move the system
 	//                  to
 	// Enable() - Enables the PID controller.
-	relay = new Relay(3);
+	relay = new Relay(TILT_MOTOR_PORT);
 	
 }
 

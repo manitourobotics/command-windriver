@@ -19,15 +19,47 @@
 		LAUNCHER_JOYSTICK_PORT = 2
 	};
 	
+	//PWM ports
 	enum
 	{
 		LEFT_DRIVE_PORT = 1,
 		RIGHT_DRIVE_PORT = 2,
-		TWIST_MOTOR_PORT = 4,
-		TILT_MOTOR_PORT = 5,
-		BELT_MOTOR_PORT = 6,
-		ARM_MOTOR_PORT = 7
+		TOP_MOTOR_PORT = 5,
+		BOTTOM_MOTOR_PORT = 6,
+		BELT_MOTOR_PORT = 7,
+		ARM_MOTOR_PORT = 9
+
 	};
+	
+	//Relay ports
+	enum
+	{
+		TWIST_MOTOR_PORT = 1,
+		TILT_MOTOR_PORT = 3,
+
+		LOWER_LIMIT_ARM_PORT = 13,
+		UPPER_LIMIT_ARM_PORT = 14
+	};
+	
+	// Controller buttons
+	enum
+	{
+		FORWARD_ACQUISITION = 1,
+		STOP_ACQUISITION = 2,
+		REVERSE_ACQUISITION = 4,
+		FORWARD_ARM = 5
+		
+	};
+	
+	// Joystick buttons
+	enum
+	{
+		DECREASE_SHOOTER_SPEED = 3,
+		INCREASE_SHOOTER_SPEED = 5
+		
+	};
+	
+	// Joystick 
 	
 
 // If you are using multiple modules, make sure to define both the port

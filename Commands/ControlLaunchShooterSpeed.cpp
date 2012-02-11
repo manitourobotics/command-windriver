@@ -1,4 +1,5 @@
 #include "ControlLaunchShooterSpeed.h"
+#include "../Robotmap.h"
 
 ControlLaunchShooterSpeed::ControlLaunchShooterSpeed():
 currentMotorSpeeds(0), incrementSpeeds(.01){
@@ -22,21 +23,23 @@ void ControlLaunchShooterSpeed::Execute() {
 		Wait(1);
 	}
 	*/
-	if(oi->getLauncherJoystick()->GetRawButton(5))
+	if(oi->getLauncherJoystick()->GetRawButton(INCREASE_SHOOTER_SPEED))
 	{
 		currentMotorSpeeds += incrementSpeeds;
 	}
-	else if(oi->getLauncherJoystick()->GetRawButton(3))
+	else if(oi->getLauncherJoystick()->GetRawButton(DECREASE_SHOOTER_SPEED))
 	{
 		currentMotorSpeeds -= incrementSpeeds;
 	}
+	
+	
 	if(currentMotorSpeeds > 1)
 	{
 		currentMotorSpeeds = 1;
 	}
-	else if(currentMotorSpeeds < -1)
+	else if(currentMotorSpeeds < 0) // The motor doesn't need to go in reverse.
 	{
-		currentMotorSpeeds = -1;
+		currentMotorSpeeds = 0;
 	}
 	
 	launchShooter->setMotorSpeeds(currentMotorSpeeds);

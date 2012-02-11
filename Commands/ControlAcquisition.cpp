@@ -1,4 +1,5 @@
 #include "ControlAcquisition.h"
+#include "../Robotmap.h"
 
 ControlAcquisition::ControlAcquisition() {
 	// Use requires() here to declare subsystem dependencies
@@ -13,15 +14,15 @@ void ControlAcquisition::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void ControlAcquisition::Execute() {
-	if(oi->getDriverJoystick()->GetRawButton(3)) //dummy buttons
+	if(oi->getDriverJoystick()->GetRawButton(FORWARD_ACQUISITION)) //dummy buttons
 	{
 		acquisition->moveForward();
 	}
-	if(oi->getDriverJoystick()->GetRawButton(5))
+	if(oi->getDriverJoystick()->GetRawButton(REVERSE_ACQUISITION))
 	{
 		acquisition->moveReverse();
 	}
-	if(oi->getDriverJoystick()->GetRawButton(4))
+	if(oi->getDriverJoystick()->GetRawButton(STOP_ACQUISITION))
 	{
 		acquisition->moveOff();
 	}

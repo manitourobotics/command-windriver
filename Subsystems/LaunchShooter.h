@@ -12,12 +12,7 @@
 class LaunchShooter: public PIDSubsystem {
 private:
 	
-	enum
-	{
-		TOP_MOTOR_PORT = 5,
-		BOTTOM_MOTOR_PORT = 6
-	};
-	
+
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
 	// set the P, I, and D constants here

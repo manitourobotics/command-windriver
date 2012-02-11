@@ -8,7 +8,7 @@ LaunchTwister::LaunchTwister() : PIDSubsystem("LaunchTwister", Kp, Ki, Kd) {
 	// SetSetpoint() -  Sets where the PID controller should move the system
 	//                  to
 	// Enable() - Enables the PID controller.
-	relay = new Relay(1);
+	relay = new Relay(TWIST_MOTOR_PORT);
 	relay->Set(Relay::kOn);
 }
 

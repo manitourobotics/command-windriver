@@ -3,7 +3,7 @@
 #include "../Commands/DriveWithJoystick.h"
 
 Chassis::Chassis() : Subsystem("Chassis") {	
-	drive = new RobotDrive(1,2);
+	drive = new RobotDrive(LEFT_DRIVE_PORT, RIGHT_DRIVE_PORT);
 	drive->SetSafetyEnabled(false);
 	watchdog = new Watchdog();
 }

@@ -15,7 +15,7 @@ void IncreaseShooterSpeed::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void IncreaseShooterSpeed::Execute() 
 {
-	launchShooter->arcadeDrive(oi->getLauncherJoystick());	
+//	launchShooter->arcadeDrive(oi->getLauncherJoystick());	
 }
 
 // Make this return true when this Command no longer needs to run execute()
