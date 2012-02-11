@@ -1,11 +1,10 @@
 #include "Arm.h"
 #include "../Robotmap.h"
-#include "../OI.h"
 #include "../Commands/ControlArm.h"
 
 Arm::Arm():
 Subsystem("Arm"), SET_SPEED(.4)/*dummy speed*/ {
-	armMotor = new Jaguar(OI::ARM_MOTOR_PORT);
+	armMotor = new Jaguar(ARM_MOTOR_PORT);
 }
     
 void Arm::InitDefaultCommand() {

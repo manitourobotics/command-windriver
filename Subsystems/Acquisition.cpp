@@ -1,11 +1,11 @@
 #include "Acquisition.h"
 #include "../Robotmap.h"
 #include "../Commands/ControlAcquisition.h"
-#include "../OI.h"
+
 
 Acquisition::Acquisition(): 
 Subsystem("Acquisition"), MAX_SPEED(0.5) {
-	beltMotor = new Jaguar(OI::BELT_MOTOR_PORT);
+	beltMotor = new Jaguar(BELT_MOTOR_PORT);
 }
     
 void Acquisition::InitDefaultCommand() {

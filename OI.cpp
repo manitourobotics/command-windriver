@@ -1,4 +1,5 @@
 #include "OI.h"
+#include "Robotmap.h"
 
 OI::OI() {
 	// Process operator interface input here.
