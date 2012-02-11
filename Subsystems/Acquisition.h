@@ -12,9 +12,17 @@ class Acquisition: public Subsystem {
 private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
+	
+	const float MAX_SPEED;
+	Jaguar* beltMotor;
 public:
+	void setSpeed(float speed);
 	Acquisition();
 	void InitDefaultCommand();
+	
+	void moveForward();
+	void moveReverse();
+	void moveOff();
 };
 
 #endif

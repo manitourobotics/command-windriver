@@ -4,6 +4,7 @@
 #include "Subsystems/LaunchShooter.h"
 #include "Subsystems/LaunchTilter.h"
 #include "Subsystems/LaunchTwister.h"
+#include "Subsystems/Arm.h"
 #include "Commands/Scheduler.h"
 
 CommandBase::CommandBase(const char *name) : Command(name) {
@@ -12,11 +13,12 @@ CommandBase::CommandBase(const char *name) : Command(name) {
 CommandBase::CommandBase() : Command() {
 }
 
-Chassis *CommandBase::chassis = NULL;
-Acquisition *CommandBase::acquisition = NULL;
-LaunchShooter *CommandBase::launchShooter = NULL;
-LaunchTilter *CommandBase::launchTilter = NULL;
-LaunchTwister *CommandBase::launchTwister = NULL;
+Chassis* CommandBase::chassis = NULL;
+Acquisition* CommandBase::acquisition = NULL;
+LaunchShooter* CommandBase::launchShooter = NULL;
+LaunchTilter* CommandBase::launchTilter = NULL;
+LaunchTwister* CommandBase::launchTwister = NULL;
+Arm* CommandBase::arm = NULL;
 
 OI* CommandBase::oi = NULL;
 
@@ -28,6 +30,7 @@ void CommandBase::init() {
 	launchShooter = new LaunchShooter();
 	launchTilter = new LaunchTilter();
 	launchTwister = new LaunchTwister();
+	arm = new Arm();
 	
 	oi = new OI();
 }
