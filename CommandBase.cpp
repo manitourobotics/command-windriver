@@ -19,8 +19,12 @@ LaunchShooter* CommandBase::launchShooter = NULL;
 LaunchTilter* CommandBase::launchTilter = NULL;
 LaunchTwister* CommandBase::launchTwister = NULL;
 Arm* CommandBase::arm = NULL;
+Camera* CommandBase::camera = NULL;
+
+SmartDashboard* CommandBase::sd = NULL;
 
 OI* CommandBase::oi = NULL;
+
 
 void CommandBase::init() {
     // Create a single static instance of all of your subsystems. The following
@@ -34,4 +38,11 @@ void CommandBase::init() {
 	camera = new Camera();
 	
 	oi = new OI();
+	
+	sd->PutData(chassis);
+	sd->PutData(acquisition);
+	sd->PutData(launchShooter);
+	sd->PutData(launchTilter);
+	sd->PutData(launchTwister);
+	sd->PutData(arm);
 }

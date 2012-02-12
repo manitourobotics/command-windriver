@@ -32,6 +32,8 @@ public:
 	static Arm* arm;
 	static Camera* camera;
 	
+	static SmartDashboard* sd;
+	
 	static OI *oi;
 };
 
