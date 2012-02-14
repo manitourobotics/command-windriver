@@ -17,8 +17,3 @@ Joystick* OI::getLauncherJoystick()
 {
 	return launcherStick;
 }
-
-JoystickButton* OI::getToLauncher()
-{
-	return toLauncher;
-}

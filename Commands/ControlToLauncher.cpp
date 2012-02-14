@@ -14,9 +14,11 @@ void ControlToLauncher::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void ControlToLauncher::Execute() {
-	if(oi->getDriverJoystick()->GetRawButton(TO_LAUNCHER))
+	//cout << oi->getLauncherJoystick()->GetRawButton(Joystick::kTriggerButton);
+	cout << oi->getLauncherJoystick()->GetRawButton(Joystick::kTopButton);
+	if(oi->getLauncherJoystick()->GetRawButton(Joystick::kTopButton))
 	{
-		toLauncher->setDirection(Relay::kForward);	
+		toLauncher->setDirection(Relay::kForward);
 	}
 	else
 	{

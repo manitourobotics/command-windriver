@@ -10,9 +10,7 @@ private:
 	
 	Joystick *driverStick;
 	Joystick *launcherStick;
-	
-	JoystickButton *toLauncher;
-	
+		
 public:
 
 	OI();
