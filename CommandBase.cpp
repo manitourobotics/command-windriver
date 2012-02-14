@@ -22,7 +22,7 @@ Arm* CommandBase::arm = NULL;
 Camera* CommandBase::camera = NULL;
 ToLauncher* CommandBase::toLauncher = NULL;
 
-//SmartDashboard* CommandBase::sd = NULL;
+SmartDashboard* CommandBase::sd = NULL;
 
 OI* CommandBase::oi = NULL;
 
@@ -38,14 +38,14 @@ void CommandBase::init() {
 	arm = new Arm();
 	camera = new Camera();
 	toLauncher = new ToLauncher();
+	sd = SmartDashboard::GetInstance();
 	
 	oi = new OI();
-	/*
+	
 	sd->PutData(chassis);
 	sd->PutData(acquisition);
 	sd->PutData(launchShooter);
 	sd->PutData(launchTilter);
 	sd->PutData(launchTwister);
 	sd->PutData(arm);
-	*/
 }

@@ -34,7 +34,7 @@ public:
 	static Camera* camera;
 	static ToLauncher* toLauncher;
 	
-	//static SmartDashboard* sd;
+	static SmartDashboard* sd;
 	
 	static OI *oi;
 };

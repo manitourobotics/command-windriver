@@ -1,5 +1,6 @@
 #include "Camera.h"
 #include "../Robotmap.h"
+#include "../Commands/GetCameraData.h"
 
 Camera::Camera() : Subsystem("Camera") {
 
@@ -14,9 +15,19 @@ Camera::~Camera() {
     
 void Camera::InitDefaultCommand() {
 	// Set the default command for a subsystem here.
-	//SetDefaultCommand(new MySpecialCommand());
+	SetDefaultCommand(new GetCameraData());
 }
 
 
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
+
+ColorImage* Camera::getCurrentImage()
+{
+	return image;
+}
+
+AxisCamera* Camera::getCamera()
+{
+	return camera;
+}

@@ -15,10 +15,15 @@ private:
 	
 	AxisCamera* camera;
 	
+	ColorImage* image;
+	
 public:
 	Camera();
 	~Camera();
 	void InitDefaultCommand();
+	
+	ColorImage* getCurrentImage();
+	AxisCamera* getCamera();
 };
 
 #endif
