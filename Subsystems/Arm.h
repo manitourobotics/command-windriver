@@ -20,6 +20,8 @@ private:
 	DigitalInput* downPosition;
 public:
 	Arm();
+	~Arm();
+	
 	void InitDefaultCommand();
 	
 	void moveForward();

@@ -14,14 +14,20 @@ MAX_SPEED(0.416666667)/* MAX SPEED temporary for testing encoding motor */{
 	
 	topMotor = new Jaguar(TOP_MOTOR_PORT);
 	bottomMotor = new Jaguar(BOTTOM_MOTOR_PORT);
-	digitalEncoder = new Encoder(DIGITAL_ENCODER_A, DIGITAL_ENCODER_B);
+	//digitalEncoder = new Encoder(DIGITAL_ENCODER_A, DIGITAL_ENCODER_B);
 	
-	digitalEncoder->Start();
-	SetSetpoint(FINAL_ARM_POSITION);
-	Enable();
+	//digitalEncoder->Start();
+	//SetSetpoint(FINAL_ARM_POSITION);
+	//Enable();
+	
 	
 	//drive = new RobotDrive(TOP_MOTOR_PORT, BOTTOM_MOTOR_PORT);
 	
+}
+
+LaunchShooter::~LaunchShooter() {
+	delete topMotor;
+	delete bottomMotor;
 }
 
 double LaunchShooter::ReturnPIDInput() {

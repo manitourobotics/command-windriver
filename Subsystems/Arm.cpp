@@ -9,7 +9,12 @@ Subsystem("Arm"), SET_SPEED(.416666667)/*12v speed -> 5v*/ {
 	upPosition = new DigitalInput(UPPER_LIMIT_ARM_PORT);
 	downPosition = new DigitalInput(LOWER_LIMIT_ARM_PORT);
 }
-    
+ 
+Arm::~Arm() {
+	delete armMotor;
+	delete upPosition;
+	delete downPosition;
+}
 void Arm::InitDefaultCommand() {
 	// Set the default command for a subsystem here.
 	//SetDefaultCommand(new MySpecialCommand());

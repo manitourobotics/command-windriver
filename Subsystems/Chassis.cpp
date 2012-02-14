@@ -5,7 +5,12 @@
 Chassis::Chassis() : Subsystem("Chassis") {	
 	drive = new RobotDrive(LEFT_DRIVE_PORT, RIGHT_DRIVE_PORT);
 	drive->SetSafetyEnabled(false);
-	watchdog = new Watchdog();
+	//watchdog = new Watchdog();
+}
+
+Chassis::~Chassis() {
+	//delete watchdog;
+	delete drive;
 }
     
 void Chassis::InitDefaultCommand() {
@@ -15,6 +20,6 @@ void Chassis::InitDefaultCommand() {
 
 void Chassis::driveWithJoystick(double left, double right)
 {
-	watchdog->Feed();
+	//watchdog->Feed();
 	drive->TankDrive(left, right);
 }

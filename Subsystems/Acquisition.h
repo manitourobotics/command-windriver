@@ -16,13 +16,15 @@ private:
 	const float MAX_SPEED;
 	Jaguar* beltMotor;
 public:
-	void setSpeed(float speed);
 	Acquisition();
+	~Acquisition();
 	void InitDefaultCommand();
 	
+	//void setSpeed(float speed);
 	void moveForward();
 	void moveReverse();
 	void moveOff();
+
 };
 
 #endif

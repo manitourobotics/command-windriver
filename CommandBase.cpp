@@ -20,8 +20,9 @@ LaunchTilter* CommandBase::launchTilter = NULL;
 LaunchTwister* CommandBase::launchTwister = NULL;
 Arm* CommandBase::arm = NULL;
 Camera* CommandBase::camera = NULL;
+ToLauncher* CommandBase::toLauncher = NULL;
 
-SmartDashboard* CommandBase::sd = NULL;
+//SmartDashboard* CommandBase::sd = NULL;
 
 OI* CommandBase::oi = NULL;
 
@@ -36,13 +37,15 @@ void CommandBase::init() {
 	launchTwister = new LaunchTwister();
 	arm = new Arm();
 	camera = new Camera();
+	toLauncher = new ToLauncher();
 	
 	oi = new OI();
-	
+	/*
 	sd->PutData(chassis);
 	sd->PutData(acquisition);
 	sd->PutData(launchShooter);
 	sd->PutData(launchTilter);
 	sd->PutData(launchTwister);
 	sd->PutData(arm);
+	*/
 }

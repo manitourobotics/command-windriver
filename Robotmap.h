@@ -36,6 +36,7 @@
 	{
 		TWIST_MOTOR_PORT = 1,
 		TILT_MOTOR_PORT = 3,
+		TO_LAUNCHER_MOTOR_PORT = 4
 
 		
 	};
@@ -54,16 +55,17 @@
 	{
 		FORWARD_ACQUISITION = 1,
 		STOP_ACQUISITION = 2,
+		TO_LAUNCHER = 3, // X button
 		REVERSE_ACQUISITION = 4,
 		FORWARD_ARM = 5
-		
 	};
 	
 	// Joystick buttons
 	enum
 	{
 		DECREASE_SHOOTER_SPEED = 3,
-		INCREASE_SHOOTER_SPEED = 5
+		INCREASE_SHOOTER_SPEED = 5,
+
 		
 	};
 	

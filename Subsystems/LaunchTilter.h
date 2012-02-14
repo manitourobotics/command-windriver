@@ -21,6 +21,8 @@ private:
 	Relay* relay;
 public:
 	LaunchTilter();
+	~LaunchTilter();
+	
 	double ReturnPIDInput();
 	void UsePIDOutput(double output);
 	void InitDefaultCommand();

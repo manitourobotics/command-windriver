@@ -11,12 +11,16 @@ private:
 	Joystick *driverStick;
 	Joystick *launcherStick;
 	
+	JoystickButton *toLauncher;
+	
 public:
 
 	OI();
 	
 	Joystick *getDriverJoystick();
 	Joystick *getLauncherJoystick();
+	
+	JoystickButton* getToLauncher();
 };
 
 #endif

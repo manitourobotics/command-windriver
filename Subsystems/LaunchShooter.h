@@ -25,6 +25,7 @@ private:
 	
 	Encoder* digitalEncoder;
 
+
 	const float BOTTOM_MOTOR_PORPORTIONALITY_CONSTANT; // The bottom motor must spin slower than the upper one.
 	const float MAX_SPEED;
 
@@ -33,13 +34,13 @@ private:
 	
 public:
 	LaunchShooter();
-	
-	void arcadeDrive(Joystick* stick);
+	~LaunchShooter();
 	
 	double ReturnPIDInput();
 	void UsePIDOutput(double output);
 	void InitDefaultCommand();
 	
+	void arcadeDrive(Joystick* stick);
 	void setMotorSpeeds(float speed);
 	void stopMotors();
 	

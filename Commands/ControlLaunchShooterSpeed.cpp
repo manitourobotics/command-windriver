@@ -24,7 +24,7 @@ void ControlLaunchShooterSpeed::Execute() {
 	}
 	*/
 	
-	cout << launchShooter->getDigitalEncoder()->Get();
+	//cout << launchShooter->getDigitalEncoder()->Get();
 	if(oi->getLauncherJoystick()->GetRawButton(INCREASE_SHOOTER_SPEED))
 	{
 		currentMotorSpeeds += incrementSpeeds;

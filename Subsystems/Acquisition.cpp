@@ -7,6 +7,10 @@ Acquisition::Acquisition():
 Subsystem("Acquisition"), MAX_SPEED(0.5) {
 	beltMotor = new Jaguar(BELT_MOTOR_PORT);
 }
+
+Acquisition::~Acquisition() {
+	delete beltMotor;
+}
     
 void Acquisition::InitDefaultCommand() {
 	// Set the default command for a subsystem here.

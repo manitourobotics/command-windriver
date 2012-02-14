@@ -7,6 +7,10 @@ Camera::Camera() : Subsystem("Camera") {
 	camera->WriteResolution(AxisCamera::kResolution_320x240);
 	camera->WriteBrightness(0);
 }
+
+Camera::~Camera() {
+	delete camera;
+}
     
 void Camera::InitDefaultCommand() {
 	// Set the default command for a subsystem here.

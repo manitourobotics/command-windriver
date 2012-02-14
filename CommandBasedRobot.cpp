@@ -17,6 +17,7 @@ private:
 	
 	virtual void AutonomousPeriodic() {
 		//Scheduler::GetInstance()->Run();
+		
 	}
 	
 	virtual void TeleopInit() {
@@ -29,6 +30,8 @@ private:
 	
 	virtual void TeleopPeriodic() {
 		Scheduler::GetInstance()->Run();
+		
+		//GetWatchdog.SetEnabled(false);
 	}
 };
 

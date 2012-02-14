@@ -12,6 +12,10 @@ LaunchTwister::LaunchTwister() : PIDSubsystem("LaunchTwister", Kp, Ki, Kd) {
 	relay->Set(Relay::kOn);
 }
 
+LaunchTwister::~LaunchTwister(){
+	delete relay;
+}
+
 double LaunchTwister::ReturnPIDInput() {
 	// Return your input value for the PID loop
 	// e.g. a sensor, like a potentiometer:

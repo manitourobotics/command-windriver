@@ -21,6 +21,8 @@ private:
 	Relay* relay;
 public:
 	LaunchTwister();
+	~LaunchTwister();
+	
 	double ReturnPIDInput();
 	void UsePIDOutput(double output);
 	void InitDefaultCommand();

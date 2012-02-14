@@ -1,27 +1,27 @@
-#ifndef CHASSIS_H
-#define CHASSIS_H
+#ifndef TOLAUNCHER_H
+#define TOLAUNCHER_H
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
 
 /**
  *
  *
- * @author b1500048
+ * @author Bang
  */
-class Chassis: public Subsystem {
+class ToLauncher: public Subsystem {
 private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
-	RobotDrive* drive;
-	//Watchdog* watchdog;
+	
+	Relay* toLauncherWheel;
 	
 public:
-	Chassis();
-	~Chassis();
+	ToLauncher();
+	~ToLauncher();
 	
 	void InitDefaultCommand();
 	
-	void driveWithJoystick(double left, double right);
+	void setDirection(Relay::Value value);
 };
 
 #endif

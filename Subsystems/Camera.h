@@ -17,6 +17,7 @@ private:
 	
 public:
 	Camera();
+	~Camera();
 	void InitDefaultCommand();
 };
 
