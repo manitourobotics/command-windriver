@@ -15,7 +15,8 @@ private:
 	
 	AxisCamera* camera;
 	
-	ColorImage* image;
+	HSLImage* image;
+	BinaryImage* operatedImage;
 	
 public:
 	Camera();
@@ -24,6 +25,8 @@ public:
 	
 	ColorImage* getCurrentImage();
 	AxisCamera* getCamera();
+	
+	void operateOnImage();
 };
 
 #endif

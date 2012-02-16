@@ -14,6 +14,7 @@ void GetCameraData::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void GetCameraData::Execute() {
 	camera->getCamera()->GetImage(camera->getCurrentImage());
+	camera->operateOnImage();
 }
 
 // Make this return true when this Command no longer needs to run execute()
