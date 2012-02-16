@@ -6,7 +6,8 @@ Camera::Camera() : Subsystem("Camera") {
 
 	camera = &(AxisCamera::GetInstance());
 	camera->WriteResolution(AxisCamera::kResolution_320x240);
-	camera->WriteBrightness(0);
+	camera->WriteBrightness(AxisCamera::kWhiteBalance_Automatic);
+	camera->WriteCompression(30);
 	
 	image = new HSLImage();
 	operatedImage = new BinaryImage();
@@ -50,11 +51,16 @@ void Camera::operateOnImage()
 	thresholdImage = image->ThresholdHSL(hueLow, hueHigh, saturationLow, 
 			saturationHigh, luminenceLow, luminenceHigh);
 	BinaryImage* bigObjectsImage = new BinaryImage();
-	bigObjectsImage = thresholdImage.RemoveSmallObjects(false, 2);
+	bigObjectsImage = thresholdImage->RemoveSmallObjects(false, 2);
 	BinaryImage* convexHullImage = new BinaryImage();
-	convexHullImage = bigObjectsImage.ConvexHull(false);
+	convexHullImage = bigObjectsImage->ConvexHull(false);
 	BinaryImage* filteredImage = new BinaryImage();
-	filteredImage = convexHullImage.ParticleFilter();
+	//filteredImage = convexHullImage->ParticleFilter();
+	
+	delete thresholdImage;
+	delete bigObjectsImage;
+	delete convexHullImage;
+	delete filteredImage;
 	
 
 }
