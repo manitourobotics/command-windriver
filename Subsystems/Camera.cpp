@@ -6,7 +6,10 @@ Camera::Camera() : Subsystem("Camera") {
 
 	camera = &(AxisCamera::GetInstance());
 	camera->WriteResolution(AxisCamera::kResolution_320x240);
-	camera->WriteBrightness(AxisCamera::kWhiteBalance_Automatic);
+
+	camera->WriteWhiteBalance(AxisCamera::kWhiteBalance_FixedOutdoor1);
+	camera->WriteExposureControl(AxisCamera::kExposure_FlickerFree50Hz);
+	camera->WriteExposurePriority(50); //none
 	camera->WriteCompression(30);
 	
 	image = new HSLImage();
@@ -17,6 +20,7 @@ Camera::~Camera() {
 	delete camera;
 	delete image;
 	delete operatedImage;
+	delete particles;
 }
     
 void Camera::InitDefaultCommand() {
@@ -41,12 +45,12 @@ AxisCamera* Camera::getCamera()
 void Camera::operateOnImage()
 {
 
-	int hueLow = 0;
-	int hueHigh = 255;
-	int saturationLow = 0;
+	int hueLow = 80;
+	int hueHigh = 147;
+	int saturationLow = 61;
 	int saturationHigh = 255;
-	int luminenceLow = 0;
-	int luminenceHigh = 255;
+	int luminenceLow = 145;
+	int luminenceHigh = 253;
 	BinaryImage* thresholdImage  = new BinaryImage();
 	thresholdImage = image->ThresholdHSL(hueLow, hueHigh, saturationLow, 
 			saturationHigh, luminenceLow, luminenceHigh);
@@ -54,13 +58,16 @@ void Camera::operateOnImage()
 	bigObjectsImage = thresholdImage->RemoveSmallObjects(false, 2);
 	BinaryImage* convexHullImage = new BinaryImage();
 	convexHullImage = bigObjectsImage->ConvexHull(false);
-	BinaryImage* filteredImage = new BinaryImage();
+	//BinaryImage* filteredImage = new BinaryImage();
+	
+	vector<ParticleAnalysisReport>* particles = convexHullImage->GetOrderedParticleAnalysisReports();
 	//filteredImage = convexHullImage->ParticleFilter();
 	
 	delete thresholdImage;
 	delete bigObjectsImage;
 	delete convexHullImage;
-	delete filteredImage;
+	
+	//delete filteredImage;
 	
 
 }

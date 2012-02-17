@@ -18,6 +18,8 @@ private:
 	HSLImage* image;
 	BinaryImage* operatedImage;
 	
+	vector<ParticleAnalysisReport>* particles;
+	
 public:
 	Camera();
 	~Camera();
