@@ -18,7 +18,13 @@ private:
 	HSLImage* image;
 	BinaryImage* operatedImage;
 	
+	double const LENS_ANGLE;
+	double const RESOLUTION_WIDTH;
+	double const RESOLUTION_HEIGHT;
+	double distance;
+	
 	vector<ParticleAnalysisReport>* particles;
+	vector<ParticleAnalysisReport>* rects;
 	
 public:
 	Camera();
@@ -29,6 +35,8 @@ public:
 	AxisCamera* getCamera();
 	
 	void operateOnImage();
+	void determineDistance();
+	void determineRects();
 };
 
 #endif

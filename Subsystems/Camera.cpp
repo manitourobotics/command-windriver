@@ -2,7 +2,9 @@
 #include "../Robotmap.h"
 #include "../Commands/GetCameraData.h"
 
-Camera::Camera() : Subsystem("Camera") {
+Camera::Camera() : 
+Subsystem("Camera"), LENS_ANGLE(47),
+RESOLUTION_WIDTH(320), RESOLUTION_HEIGHT(240) {
 
 	camera = &(AxisCamera::GetInstance());
 	camera->WriteResolution(AxisCamera::kResolution_320x240);
@@ -68,6 +70,12 @@ void Camera::operateOnImage()
 	delete convexHullImage;
 	
 	//delete filteredImage;
-	
+}
 
+void Camera::determineRects()
+{
+	
+}
+void Camera::determineDistance()
+{
 }
