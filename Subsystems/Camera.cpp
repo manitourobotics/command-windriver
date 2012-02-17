@@ -45,11 +45,11 @@ AxisCamera* Camera::getCamera()
 void Camera::operateOnImage()
 {
 
-	int hueLow = 80;
-	int hueHigh = 147;
-	int saturationLow = 61;
+	int hueLow = 38;
+	int hueHigh = 102;
+	int saturationLow = 140;
 	int saturationHigh = 255;
-	int luminenceLow = 145;
+	int luminenceLow = 146;
 	int luminenceHigh = 253;
 	BinaryImage* thresholdImage  = new BinaryImage();
 	thresholdImage = image->ThresholdHSL(hueLow, hueHigh, saturationLow, 
