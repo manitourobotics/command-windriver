@@ -74,8 +74,24 @@ void Camera::operateOnImage()
 
 void Camera::determineRects()
 {
-	
+	double SCORE_THRESHOLD = 85;
+	double score = 0;
+	for(unsigned int i = 0; i < particles->size(); i++)
+	{
+		//(particle area / bounding rectangle area) * 100
+		score = ((*particles)[i].particleArea / ((*particles)[i].boundingRect.width *(*particles)[i].boundingRect.height)) * 100.0 ;
+		if (score > SCORE_THRESHOLD)
+		{
+			rects->push_back(((*particles)[i]));
+		}
+		
+	}
 }
+
 void Camera::determineDistance()
 {
+	for(unsigned int i = 0; i < rects->size(); i++)
+	{
+		
+	}
 }
