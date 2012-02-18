@@ -2,7 +2,7 @@
 #define CAMERA_H
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
-
+#include <cmath>
 /**
  *
  *

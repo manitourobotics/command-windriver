@@ -3,7 +3,7 @@
 #include "../Commands/GetCameraData.h"
 
 Camera::Camera() : 
-Subsystem("Camera"), LENS_ANGLE(47),
+Subsystem("Camera"), LENS_ANGLE(54),
 RESOLUTION_WIDTH(320), RESOLUTION_HEIGHT(240) {
 
 	camera = &(AxisCamera::GetInstance());
@@ -52,7 +52,7 @@ void Camera::operateOnImage()
 	int saturationLow = 140;
 	int saturationHigh = 255;
 	int luminenceLow = 146;
-	int luminenceHigh = 253;
+	int luminenceHigh = 255;
 	BinaryImage* thresholdImage  = new BinaryImage();
 	thresholdImage = image->ThresholdHSL(hueLow, hueHigh, saturationLow, 
 			saturationHigh, luminenceLow, luminenceHigh);
@@ -74,13 +74,24 @@ void Camera::operateOnImage()
 
 void Camera::determineRects()
 {
-	double SCORE_THRESHOLD = 85;
-	double score = 0;
+	
+	double const RECT_SCORE_THRESHOLD = 85;
+	double rect_score = 0;
+	
+	double const ASPECT_SCORE_DEVIATION = .2;
+	double const ASPECT = 1.33333333;
+	double aspect_score = 0;
+	
 	for(unsigned int i = 0; i < particles->size(); i++)
 	{
+		cout << "rect score: " << rect_score << '\n';
+		cout << "aspect_score: " << aspect_score << '\n';
+		
 		//(particle area / bounding rectangle area) * 100
-		score = ((*particles)[i].particleArea / ((*particles)[i].boundingRect.width *(*particles)[i].boundingRect.height)) * 100.0 ;
-		if (score > SCORE_THRESHOLD)
+		rect_score = ((*particles)[i].particleArea / ((*particles)[i].boundingRect.width *(*particles)[i].boundingRect.height)) * 100.0 ;
+		aspect_score = (*particles)[i].boundingRect.width / (*particles)[i].boundingRect.height;
+		if (rect_score > RECT_SCORE_THRESHOLD && aspect_score > (ASPECT - ASPECT_SCORE_DEVIATION) 
+				&& aspect_score < (ASPECT + ASPECT_SCORE_DEVIATION))
 		{
 			rects->push_back(((*particles)[i]));
 		}
@@ -90,8 +101,11 @@ void Camera::determineRects()
 
 void Camera::determineDistance()
 {
+	/*
 	for(unsigned int i = 0; i < rects->size(); i++)
 	{
 		
 	}
+	*/8
+	distance = (tan(LENS_ANGLE/2) / ((RESOLUTION_WIDTH*2) / ((*rects)[0].boundingRect.width / 2));
 }

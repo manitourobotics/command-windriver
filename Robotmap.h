@@ -27,7 +27,7 @@
 		TOP_MOTOR_PORT = 5,
 		BOTTOM_MOTOR_PORT = 6,
 		BELT_MOTOR_PORT = 7,
-		ARM_MOTOR_PORT = 9
+		
 
 	};
 	
@@ -36,7 +36,8 @@
 	{
 		TWIST_MOTOR_PORT = 1,
 		TILT_MOTOR_PORT = 3,
-		TO_LAUNCHER_MOTOR_PORT = 4
+		TO_LAUNCHER_MOTOR_PORT = 4,
+		ARM_MOTOR_PORT = 5
 
 		
 	};
@@ -45,9 +46,10 @@
 	enum
 	{	
 		DIGITAL_ENCODER_A = 1,
-		DIGITAL_ENCODER_B = 2,
+		DIGITAL_ENCODER_B = 2,S
 		LOWER_LIMIT_ARM_PORT = 13,
 		UPPER_LIMIT_ARM_PORT = 14
+		
 	};
 	
 	// Controller buttons
