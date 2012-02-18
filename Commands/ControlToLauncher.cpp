@@ -15,7 +15,7 @@ void ControlToLauncher::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void ControlToLauncher::Execute() {
 	//cout << oi->getLauncherJoystick()->GetRawButton(Joystick::kTriggerButton);
-	cout << oi->getLauncherJoystick()->GetRawButton(Joystick::kTopButton);
+	//cout << "Top: " << oi->getLauncherJoystick()->GetRawButton(Joystick::kTopButton) << '\n';
 	if(oi->getLauncherJoystick()->GetRawButton(Joystick::kTopButton))
 	{
 		toLauncher->setDirection(Relay::kForward);

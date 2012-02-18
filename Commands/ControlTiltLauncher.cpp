@@ -18,11 +18,11 @@ void ControlTiltLauncher::Execute() {
 	//printf("tilt_value: %f\n", tiltValue );
 	if(tiltValue > DEAD_ZONE)
 	{
-		launchTilter->rotatePositive();
+		launchTilter->rotateNegative();
 	}
 	else if(tiltValue < DEAD_ZONE * -1)
 	{
-		launchTilter->rotateNegative();
+		launchTilter->rotatePositive();
 	}
 	else
 	{

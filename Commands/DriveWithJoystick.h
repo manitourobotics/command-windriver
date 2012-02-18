@@ -11,15 +11,10 @@
 class DriveWithJoystick: public CommandBase {
 public:
 	
-	enum axis
-	{
-	    LEFT_STICK_X = 1,
-	    LEFT_STICK_Y,
-	    TRIGGERS,
-	    RIGHT_STICK_X,
-	    RIGHT_STICK_Y
-	};
 	
+	
+	double modeSpeed;
+	double const DEAD_ZONE;
 	DriveWithJoystick();
 	virtual void Initialize();
 	virtual void Execute();

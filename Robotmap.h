@@ -27,7 +27,9 @@
 		TOP_MOTOR_PORT = 5,
 		BOTTOM_MOTOR_PORT = 6,
 		BELT_MOTOR_PORT = 7,
-		
+		TILT_MOTOR_PORT = 10,
+		ARM_MOTOR_PORT = 8
+
 
 	};
 	
@@ -35,9 +37,8 @@
 	enum
 	{
 		TWIST_MOTOR_PORT = 1,
-		TILT_MOTOR_PORT = 3,
-		TO_LAUNCHER_MOTOR_PORT = 4,
-		ARM_MOTOR_PORT = 5
+		TO_LAUNCHER_MOTOR_PORT = 5,
+
 
 		
 	};
@@ -46,9 +47,11 @@
 	enum
 	{	
 		DIGITAL_ENCODER_A = 1,
-		DIGITAL_ENCODER_B = 2,S
-		LOWER_LIMIT_ARM_PORT = 13,
-		UPPER_LIMIT_ARM_PORT = 14
+		DIGITAL_ENCODER_B = 2,
+		LOWER_LIMIT_TILT_PORT = 3,
+		UPPER_LIMIT_TILT_PORT = 4,
+		LOWER_LIMIT_ARM_PORT = 5,
+		UPPER_LIMIT_ARM_PORT = 6
 		
 	};
 	
@@ -59,17 +62,27 @@
 		STOP_ACQUISITION = 2,
 		TO_LAUNCHER = 3, // X button
 		REVERSE_ACQUISITION = 4,
-		FORWARD_ARM = 5
+		FORWARD_ARM = 5,
 	};
 	
 	// Joystick buttons
 	enum
 	{
 		DECREASE_SHOOTER_SPEED = 3,
-		INCREASE_SHOOTER_SPEED = 5,
-
-		
+		INCREASE_SHOOTER_SPEED = 5
 	};
+	
+	// Controller Axises
+	enum axis
+		{
+		    LEFT_STICK_X = 1,
+		    LEFT_STICK_Y,
+		    TRIGGERS,
+		    RIGHT_STICK_X,
+		    RIGHT_STICK_Y
+		    
+		};
+	
 	
 	//voltage
 	enum
@@ -77,6 +90,8 @@
 		FINAL_ARM_POSITION = 4,
 		STARTING_ARM_POSITION = 1
 	};
+	
+	
 	
 	// Joystick 
 	

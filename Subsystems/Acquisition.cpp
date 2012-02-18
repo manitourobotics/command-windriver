@@ -4,7 +4,7 @@
 
 
 Acquisition::Acquisition(): 
-Subsystem("Acquisition"), MAX_SPEED(0.5) {
+Subsystem("Acquisition"), MAX_SPEED(1/* for testing aquisiotion*/ /*.416666667*/)/*12v speed -> 5v*/ {
 	beltMotor = new Jaguar(BELT_MOTOR_PORT);
 }
 

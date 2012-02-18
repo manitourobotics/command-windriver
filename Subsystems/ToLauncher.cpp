@@ -20,8 +20,8 @@ void ToLauncher::InitDefaultCommand() {
 // here. Call these from Commands.
 
 void ToLauncher::setDirection(Relay::Value value){
-	if(value != Relay::kReverse) // The ToLauncher wheel should never go backwards
-	{
+	//if(value != Relay::kReverse) // The ToLauncher wheel should never go backwards
+	//{
 		toLauncherWheel->Set(value);
-	}
+	//}
 }

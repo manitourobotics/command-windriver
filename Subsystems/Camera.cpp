@@ -95,7 +95,6 @@ void Camera::determineRects()
 		{
 			rects->push_back(((*particles)[i]));
 		}
-		
 	}
 }
 
@@ -106,6 +105,7 @@ void Camera::determineDistance()
 	{
 		
 	}
-	*/8
+	*/
+	double pixelDistance = 
 	distance = (tan(LENS_ANGLE/2) / ((RESOLUTION_WIDTH*2) / ((*rects)[0].boundingRect.width / 2));
 }

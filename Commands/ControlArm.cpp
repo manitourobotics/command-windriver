@@ -15,6 +15,7 @@ void ControlArm::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void ControlArm::Execute() {
 	
+	//cout << "Forward_arm: " << oi->getDriverJoystick()->GetRawButton(FORWARD_ARM) << '\n';
 	//The arm should only move outwards when the button is pressed
 	if(oi->getDriverJoystick()->GetRawButton(FORWARD_ARM))/*dummy button*/{
 		arm->moveForward();

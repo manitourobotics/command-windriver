@@ -1,12 +1,11 @@
 #include "LaunchShooter.h"
 #include "../Robotmap.h"
 #include "SmartDashboard/SmartDashboard.h"
-#include "../Commands/IncreaseShooterSpeed.h"
 #include "../Commands/ControlLaunchShooterSpeed.h"
 
 LaunchShooter::LaunchShooter() : 
-PIDSubsystem("LaunchShooter", Kp, Ki, Kd), BOTTOM_MOTOR_PORPORTIONALITY_CONSTANT(0.8), 
-MAX_SPEED(0.416666667)/* MAX SPEED temporary for testing encoding motor */{ 
+PIDSubsystem("LaunchShooter", Kp, Ki, Kd), BOTTOM_MOTOR_PORPORTIONALITY_CONSTANT(0.9), 
+MAX_SPEED(1)/* MAX SPEED temporary for testing encoding motor */{ 
 	// Use these to get going:
 	// SetSetpoint() -  Sets where the PID controller should move the system
 	//                  to

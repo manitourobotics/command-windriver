@@ -11,8 +11,8 @@
 class ControlTiltLauncher: public CommandBase {
 private:
 	
-	float tiltValue;
-	float const DEAD_ZONE;
+	double tiltValue;
+	double const DEAD_ZONE;
 	
 public:
 	ControlTiltLauncher();

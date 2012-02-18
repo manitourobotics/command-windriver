@@ -19,7 +19,6 @@ LaunchShooter* CommandBase::launchShooter = NULL;
 LaunchTilter* CommandBase::launchTilter = NULL;
 LaunchTwister* CommandBase::launchTwister = NULL;
 Arm* CommandBase::arm = NULL;
-Camera* CommandBase::camera = NULL;
 ToLauncher* CommandBase::toLauncher = NULL;
 
 SmartDashboard* CommandBase::sd = NULL;
@@ -36,7 +35,6 @@ void CommandBase::init() {
 	launchTilter = new LaunchTilter();
 	launchTwister = new LaunchTwister();
 	arm = new Arm();
-	camera = new Camera();
 	toLauncher = new ToLauncher();
 	sd = SmartDashboard::GetInstance();
 	

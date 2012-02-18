@@ -2,18 +2,24 @@
 #include "../Robotmap.h"
 #include "SmartDashboard/SmartDashboard.h"
 #include "../Commands/ControlTiltLauncher.h"
+#include <cassert>
 
-LaunchTilter::LaunchTilter() : PIDSubsystem("LaunchTilter", Kp, Ki, Kd) {
+LaunchTilter::LaunchTilter() :
+PIDSubsystem("LaunchTilter", Kp, Ki, Kd), SPEED(0.416666667) {
 	// Use these to get going:
 	// SetSetpoint() -  Sets where the PID controller should move the system
 	//                  to
 	// Enable() - Enables the PID controller.
-	relay = new Relay(TILT_MOTOR_PORT);
+	jaguar = new Jaguar(TILT_MOTOR_PORT);
 	
+	upPosition = new DigitalInput(UPPER_LIMIT_TILT_PORT);
+	downPosition = new DigitalInput(LOWER_LIMIT_TILT_PORT);
 }
 
 LaunchTilter::~LaunchTilter() {
-	delete relay;
+	delete jaguar;
+	delete upPosition;
+	delete downPosition;
 }
 
 double LaunchTilter::ReturnPIDInput() {
@@ -35,13 +41,35 @@ void LaunchTilter::InitDefaultCommand() {
 }
 
 void LaunchTilter::rotatePositive(){
-	relay->Set(Relay::kForward);
+	cout << "downPosition: " << downPosition->Get() << '\n';
+	//relay->Set(Relay::kForward);
+	if(downPosition->Get()) 
+	{
+		jaguar->Set(SPEED);
+	}
+	else
+	{
+		jaguar->Set(0);
+	}
 }
 
 void LaunchTilter::rotateNegative(){
-	relay->Set(Relay::kReverse);
+	//relay->Set(Relay::kReverse);
+	
+	cout << "upPosition: " << upPosition->Get() << '\n';
+
+	
+	if(upPosition->Get())
+	{
+		jaguar->Set(-1 * SPEED);
+	}
+	else
+	{
+		jaguar->Set(0);
+	}
 }
 
 void LaunchTilter::rotateOff(){
-	relay->Set(Relay::kOff);
+	//relay->Set(Relay::kOff);
+	jaguar->Set(0);
 }

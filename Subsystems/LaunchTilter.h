@@ -18,7 +18,11 @@ private:
 	static const double Ki = 0.0;
 	static const double Kd = 0.0;
 	
-	Relay* relay;
+	Jaguar* jaguar;
+	double const SPEED;
+	
+	DigitalInput* upPosition;
+	DigitalInput* downPosition;
 public:
 	LaunchTilter();
 	~LaunchTilter();
