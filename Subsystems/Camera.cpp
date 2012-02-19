@@ -62,7 +62,7 @@ void Camera::operateOnImage()
 	convexHullImage = bigObjectsImage->ConvexHull(false);
 	//BinaryImage* filteredImage = new BinaryImage();
 	
-	vector<ParticleAnalysisReport>* particles = convexHullImage->GetOrderedParticleAnalysisReports();
+	particles = convexHullImage->GetOrderedParticleAnalysisReports();
 	//filteredImage = convexHullImage->ParticleFilter();
 	
 	delete thresholdImage;
@@ -81,6 +81,7 @@ void Camera::determineRects()
 	double const ASPECT_SCORE_DEVIATION = .2;
 	double const ASPECT = 1.33333333;
 	double aspect_score = 0;
+	cout << "particle size: " << particles->size() << '\n';
 	
 	for(unsigned int i = 0; i < particles->size(); i++)
 	{
@@ -96,6 +97,7 @@ void Camera::determineRects()
 			rects->push_back(((*particles)[i]));
 		}
 	}
+	cout << "size: " << rects->size() << '\n';
 }
 
 void Camera::determineDistance()
@@ -105,7 +107,8 @@ void Camera::determineDistance()
 	{
 		
 	}
-	*/
-	double pixelDistance = 
-	distance = (tan(LENS_ANGLE/2) / ((RESOLUTION_WIDTH*2) / ((*rects)[0].boundingRect.width / 2));
+	*/ 
+	distance = tan(LENS_ANGLE/2) / ((RESOLUTION_WIDTH*2) / ((*rects)[0].boundingRect.width / 2));
+	cout << "distance: " << distance << '\n';
+	CommandBase::sd->PutDouble("camera", distance);
 }

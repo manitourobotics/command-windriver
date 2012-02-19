@@ -9,6 +9,7 @@
 #include "Subsystems/LaunchTwister.h"
 #include "Subsystems/Arm.h"
 #include "Subsystems/ToLauncher.h"
+#include "Subsystems/Camera.h"
 #include "OI.h"
 
 
@@ -31,6 +32,7 @@ public:
 	static LaunchTwister* launchTwister;
 	static Arm* arm;
 	static ToLauncher* toLauncher;
+	static Camera* camera;
 	
 	static SmartDashboard* sd;
 	

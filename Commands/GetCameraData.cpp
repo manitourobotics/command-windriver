@@ -15,6 +15,8 @@ void GetCameraData::Initialize() {
 void GetCameraData::Execute() {
 	camera->getCamera()->GetImage(camera->getCurrentImage());
 	camera->operateOnImage();
+	camera->determineRects();
+	camera->determineDistance();
 }
 
 // Make this return true when this Command no longer needs to run execute()

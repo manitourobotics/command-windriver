@@ -5,6 +5,7 @@
 #include "Subsystems/LaunchTilter.h"
 #include "Subsystems/LaunchTwister.h"
 #include "Subsystems/Arm.h"
+#include "Subsystems/Camera.h"
 #include "Commands/Scheduler.h"
 
 CommandBase::CommandBase(const char *name) : Command(name) {
@@ -20,6 +21,7 @@ LaunchTilter* CommandBase::launchTilter = NULL;
 LaunchTwister* CommandBase::launchTwister = NULL;
 Arm* CommandBase::arm = NULL;
 ToLauncher* CommandBase::toLauncher = NULL;
+Camera* CommandBase::camera = NULL;
 
 SmartDashboard* CommandBase::sd = NULL;
 
@@ -38,6 +40,8 @@ void CommandBase::init() {
 	toLauncher = new ToLauncher();
 	sd = SmartDashboard::GetInstance();
 	
+	camera = new Camera();
+	
 	oi = new OI();
 	
 	sd->PutData(chassis);
@@ -46,4 +50,8 @@ void CommandBase::init() {
 	sd->PutData(launchTilter);
 	sd->PutData(launchTwister);
 	sd->PutData(arm);
+	
+	double cat = 1;
+	sd->PutData(camera);
+	sd->PutDouble("camera", cat);
 }
