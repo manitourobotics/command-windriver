@@ -14,8 +14,8 @@ CommandBase::CommandBase() : Command() {
 
 Chassis* CommandBase::chassis = NULL;
 Acquisition* CommandBase::acquisition = NULL;
-//LaunchShooter* CommandBase::launchShooter = NULL;
-/*LaunchTilter* CommandBase::launchTilter = NULL;*/
+LaunchShooter* CommandBase::launchShooter = NULL;
+LaunchTilter* CommandBase::launchTilter = NULL;
 Arm* CommandBase::arm = NULL;
 ToLauncher* CommandBase::toLauncher = NULL;
 /*
