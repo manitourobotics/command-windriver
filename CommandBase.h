@@ -6,7 +6,7 @@
 
 #include "Subsystems/Acquisition.h"
 #include "Subsystems/LaunchShooter.h"
-/*#include "Subsystems/LaunchTilter.h"*/
+#include "Subsystems/LaunchTilter.h"
 #include "Subsystems/Arm.h"
 #include "Subsystems/ToLauncher.h"
 #include "OI.h"
@@ -28,7 +28,7 @@ public:
 	
 	static Acquisition* acquisition;
 	static LaunchShooter* launchShooter;
-	/*static LaunchTilter* launchTilter;*/
+	static LaunchTilter* launchTilter;
 	static Arm* arm;
 	static ToLauncher* toLauncher;
 	

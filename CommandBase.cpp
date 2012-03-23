@@ -34,7 +34,7 @@ void CommandBase::init() {
 	chassis = new Chassis();
 	acquisition = new Acquisition();
 	launchShooter = new LaunchShooter();
-	//launchTilter = new LaunchTilter();
+	launchTilter = new LaunchTilter();
 	arm = new Arm();
 	toLauncher = new ToLauncher();
 	//sd = SmartDashboard::GetInstance();
