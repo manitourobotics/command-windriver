@@ -16,9 +16,9 @@ Chassis* CommandBase::chassis = NULL;
 Acquisition* CommandBase::acquisition = NULL;
 //LaunchShooter* CommandBase::launchShooter = NULL;
 /*LaunchTilter* CommandBase::launchTilter = NULL;*/
-Arm* CommandBase::arm = NULL;/*
+Arm* CommandBase::arm = NULL;
 ToLauncher* CommandBase::toLauncher = NULL;
-
+/*
 SmartDashboard* CommandBase::sd = NULL;
 Camera* CommandBase::camera = NULL;
 */
@@ -36,7 +36,7 @@ void CommandBase::init() {
 	//launchShooter = new LaunchShooter();
 	//launchTilter = new LaunchTilter();
 	arm = new Arm();
-	//toLauncher = new ToLauncher();
+	toLauncher = new ToLauncher();
 	//sd = SmartDashboard::GetInstance();
 	//sd->init();
 	

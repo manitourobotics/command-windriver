@@ -8,7 +8,7 @@
 #include "Subsystems/LaunchShooter.h"
 #include "Subsystems/LaunchTilter.h"*/
 #include "Subsystems/Arm.h"/*
-#include "Subsystems/ToLauncher.h"*/
+*/#include "Subsystems/ToLauncher.h"
 #include "OI.h"
 //#include "Subsystems/Camera.h"
 
@@ -30,9 +30,9 @@ public:
 	/*static LaunchShooter* launchShooter;
 	static LaunchTilter* launchTilter;*/
 	static Arm* arm;
-	/*static ToLauncher* toLauncher;
+	static ToLauncher* toLauncher;
 	
-	static SmartDashboard* sd;
+	/*static SmartDashboard* sd;
 	static Camera* camera;
 	*/
 	static OI *oi;
