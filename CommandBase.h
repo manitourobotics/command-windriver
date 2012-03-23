@@ -7,8 +7,8 @@
 #include "Subsystems/Acquisition.h"/*
 #include "Subsystems/LaunchShooter.h"
 #include "Subsystems/LaunchTilter.h"*/
-#include "Subsystems/Arm.h"/*
-*/#include "Subsystems/ToLauncher.h"
+#include "Subsystems/Arm.h"
+#include "Subsystems/ToLauncher.h"
 #include "OI.h"
 //#include "Subsystems/Camera.h"
 
