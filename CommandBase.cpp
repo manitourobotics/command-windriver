@@ -33,7 +33,7 @@ void CommandBase::init() {
 	// line should be repeated for each subsystem in the project.
 	chassis = new Chassis();
 	acquisition = new Acquisition();
-	//launchShooter = new LaunchShooter();
+	launchShooter = new LaunchShooter();
 	//launchTilter = new LaunchTilter();
 	arm = new Arm();
 	toLauncher = new ToLauncher();

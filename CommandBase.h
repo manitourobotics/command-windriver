@@ -4,9 +4,9 @@
 #include "Commands/Command.h"
 #include "Subsystems/Chassis.h"
 
-#include "Subsystems/Acquisition.h"/*
+#include "Subsystems/Acquisition.h"
 #include "Subsystems/LaunchShooter.h"
-#include "Subsystems/LaunchTilter.h"*/
+/*#include "Subsystems/LaunchTilter.h"*/
 #include "Subsystems/Arm.h"
 #include "Subsystems/ToLauncher.h"
 #include "OI.h"
@@ -27,8 +27,8 @@ public:
 	static Chassis* chassis;
 	
 	static Acquisition* acquisition;
-	/*static LaunchShooter* launchShooter;
-	static LaunchTilter* launchTilter;*/
+	static LaunchShooter* launchShooter;
+	/*static LaunchTilter* launchTilter;*/
 	static Arm* arm;
 	static ToLauncher* toLauncher;
 	
